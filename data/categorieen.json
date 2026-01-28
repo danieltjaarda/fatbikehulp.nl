@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "naam": "Banden",
+    "slug": "banden",
+    "beschrijving": "Binnen- en buitenbanden voor fatbikes",
+    "actief": true,
+    "created_at": "2026-01-26T00:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "naam": "Remmen",
+    "slug": "remmen",
+    "beschrijving": "Remblokken, remschijven en complete remsets",
+    "actief": true,
+    "created_at": "2026-01-26T00:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "naam": "Verlichting",
+    "slug": "verlichting",
+    "beschrijving": "Voor- en achterverlichting",
+    "actief": true,
+    "created_at": "2026-01-26T00:00:00.000Z"
+  },
+  {
+    "id": "4",
+    "naam": "Onderdelen",
+    "slug": "onderdelen",
+    "beschrijving": "Algemene onderdelen",
+    "actief": true,
+    "created_at": "2026-01-26T00:00:00.000Z"
+  },
+  {
+    "id": "5",
+    "naam": "Accessoires",
+    "slug": "accessoires",
+    "beschrijving": "Tassen, sloten en meer",
+    "actief": true,
+    "created_at": "2026-01-26T00:00:00.000Z"
+  },
+  {
+    "id": "6",
+    "naam": "Elektrisch",
+    "slug": "elektrisch",
+    "beschrijving": "Accu's, controllers en motoren",
+    "actief": true,
+    "created_at": "2026-01-26T00:00:00.000Z"
+  },
+  {
+    "id": "1769446129523",
+    "naam": "Accu's & Batterijen",
+    "slug": "accu-s-batterijen",
+    "beschrijving": "Accu's, batterijen en laders voor fatbikes",
+    "actief": true,
+    "created_at": "2026-01-26T16:48:49.523Z"
+  }
+]

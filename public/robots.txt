@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /login
+Disallow: /dashboard
+Disallow: /reparaties
+Disallow: /klanten
+Disallow: /orders
+Disallow: /settings
+Disallow: /monteur/
+
+Sitemap: https://www.fatbikehulp.nl/sitemap.xml
+

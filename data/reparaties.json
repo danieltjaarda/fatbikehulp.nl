@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1759866756376",
+    "klant_naam": "Test Gebruiker",
+    "klant_email": "daniel@gofatbike.nl",
+    "klant_telefoon": "06-12345678",
+    "aanvraag_type": "reparatie",
+    "fiets_merk": "Gazelle",
+    "fiets_model": "Orange C7",
+    "fiets_jaar": "2025",
+    "probleem": "fdafd",
+    "beschrijving": "asdfafas",
+    "onderhoudsbeurt_type": "",
+    "laatste_onderhoud": "",
+    "locatie_type": "in_winkel",
+    "adres": "",
+    "postcode": "",
+    "plaats": "",
+    "voorkeur_datum": "2025-10-15",
+    "voorkeur_tijd": "flexibel",
+    "opmerkingen": "fddfdadfs",
+    "created_at": "2025-10-07T19:52:36.376Z",
+    "status": "afgehandeld",
+    "updated_at": "2025-10-07T19:52:47.138Z"
+  }
+]
