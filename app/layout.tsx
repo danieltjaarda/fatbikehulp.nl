@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     canonical: 'https://www.fatbikehulp.nl',
   },
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/producten/faviconlogo2.png',
+    shortcut: '/producten/faviconlogo2.png',
+    apple: '/producten/faviconlogo2.png',
   },
   other: {
     'msapplication-TileColor': '#016B61',

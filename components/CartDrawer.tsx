@@ -46,7 +46,14 @@ export default function CartDrawer() {
           {items.length === 0 ? (
             <div className="text-center py-12">
               <ShoppingCart className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <p className="text-gray-500">Je winkelwagen is leeg</p>
+              <p className="text-gray-500 mb-4">Je winkelwagen is leeg</p>
+              <a 
+                href="/fatbike-onderdelen"
+                onClick={() => setIsOpen(false)}
+                className="inline-block bg-red-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors"
+              >
+                Bekijk onderdelen
+              </a>
             </div>
           ) : (
             <div className="space-y-4">

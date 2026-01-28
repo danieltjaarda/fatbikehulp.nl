@@ -299,7 +299,7 @@ export default function HomePage() {
               <div className="relative z-10">
                 <div className="text-2xl sm:text-3xl font-bold mb-2" style={{ color: '#323232' }}>Plan reparatie in</div>
                 <p className="mb-6 text-base sm:text-lg" style={{ color: '#323232' }}>Waar je ook bent in Nederland!</p>
-                <button className="bg-[#B22D23] hover:bg-[#8f241c] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group">
+                <button className="bg-white border-2 border-gray-900 hover:bg-gray-900 text-gray-900 hover:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group">
                   <span>Nu aanvragen</span>
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
