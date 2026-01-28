@@ -35,6 +35,10 @@ yarn-error.log*
 coverage/
 .playwright-mcp/
 
+# Large files
+Orders.csv
+public/Orders.csv
+
 # Misc
 *.log
 *.tsbuildinfo
