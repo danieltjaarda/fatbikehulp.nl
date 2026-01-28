@@ -10,13 +10,13 @@ export default function Footer() {
             {/* Logo */}
             <div className="mb-8">
               <Link href="/">
-                <div className="inline-block bg-white rounded-lg p-2">
+                <div className="inline-block">
                   <Image 
-                    src="/fatbikehulp-logo-3.png" 
+                    src="/producten/fatbikehulp-logo-footer-3.png" 
                     alt="Fatbikehulp Logo" 
-                    width={200}
-                    height={80}
-                    className="h-10 sm:h-12 w-auto"
+                    width={180}
+                    height={60}
+                    className="h-12 sm:h-14 w-auto"
                   />
                 </div>
               </Link>

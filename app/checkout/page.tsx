@@ -84,7 +84,7 @@ function CheckoutForm({ clientSecret, customerDetails, onSuccess }: {
       <button
         type="submit"
         disabled={!stripe || isProcessing}
-        className="w-full py-4 bg-[#5f98c1] text-white rounded-xl font-bold hover:bg-[#4a7da3] transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        className="w-full py-4 bg-red-500 text-white rounded-xl font-bold hover:bg-red-600 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
         {isProcessing ? (
           <>
@@ -201,7 +201,7 @@ export default function CheckoutPage() {
           className="w-full px-4 py-3 flex items-center justify-between"
         >
           <div className="flex items-center gap-2">
-            <ShoppingCart className="w-5 h-5 text-[#5f98c1]" />
+            <ShoppingCart className="w-5 h-5 text-red-500" />
             <span className="font-medium">{showOrderSummary ? 'Verberg' : 'Bekijk'} bestelling ({items.length})</span>
           </div>
           <div className="flex items-center gap-2">
@@ -251,15 +251,15 @@ export default function CheckoutPage() {
       <div className="bg-white border-b">
         <div className="max-w-6xl mx-auto px-4 py-3 sm:py-4">
           <div className="flex items-center justify-center gap-2 sm:gap-4">
-            <div className={`flex items-center gap-1.5 sm:gap-2 ${step >= 1 ? 'text-[#5f98c1]' : 'text-gray-400'}`}>
-              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step >= 1 ? 'bg-[#5f98c1] text-white' : 'bg-gray-200'}`}>
+            <div className={`flex items-center gap-1.5 sm:gap-2 ${step >= 1 ? 'text-red-500' : 'text-gray-400'}`}>
+              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step >= 1 ? 'bg-red-500 text-white' : 'bg-gray-200'}`}>
                 {step > 1 ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : '1'}
               </div>
               <span className="text-sm sm:text-base font-medium">Gegevens</span>
             </div>
-            <div className={`w-8 sm:w-12 h-0.5 ${step >= 2 ? 'bg-[#5f98c1]' : 'bg-gray-200'}`}></div>
-            <div className={`flex items-center gap-1.5 sm:gap-2 ${step >= 2 ? 'text-[#5f98c1]' : 'text-gray-400'}`}>
-              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step >= 2 ? 'bg-[#5f98c1] text-white' : 'bg-gray-200'}`}>
+            <div className={`w-8 sm:w-12 h-0.5 ${step >= 2 ? 'bg-red-500' : 'bg-gray-200'}`}></div>
+            <div className={`flex items-center gap-1.5 sm:gap-2 ${step >= 2 ? 'text-red-500' : 'text-gray-400'}`}>
+              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step >= 2 ? 'bg-red-500 text-white' : 'bg-gray-200'}`}>
                 2
               </div>
               <span className="text-sm sm:text-base font-medium">Betalen</span>
@@ -275,7 +275,7 @@ export default function CheckoutPage() {
             {step === 1 ? (
               <div className="bg-white rounded-2xl shadow-sm p-4 sm:p-6 md:p-8">
                 <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
-                  <Truck className="w-5 h-5 sm:w-6 sm:h-6 text-[#5f98c1]" />
+                  <Truck className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
                   Bezorggegevens
                 </h2>
 
@@ -290,7 +290,7 @@ export default function CheckoutPage() {
                       required
                       value={customerDetails.email}
                       onChange={(e) => setCustomerDetails({ ...customerDetails, email: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base"
+                      className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base"
                       placeholder="jouw@email.nl"
                     />
                   </div>
@@ -306,7 +306,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.firstName}
                         onChange={(e) => setCustomerDetails({ ...customerDetails, firstName: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base"
+                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base"
                       />
                     </div>
                     <div>
@@ -318,7 +318,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.lastName}
                         onChange={(e) => setCustomerDetails({ ...customerDetails, lastName: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base"
+                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base"
                       />
                     </div>
                   </div>
@@ -333,7 +333,7 @@ export default function CheckoutPage() {
                       required
                       value={customerDetails.phone}
                       onChange={(e) => setCustomerDetails({ ...customerDetails, phone: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base"
+                      className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base"
                       placeholder="06 12345678"
                     />
                   </div>
@@ -349,7 +349,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.street}
                         onChange={(e) => setCustomerDetails({ ...customerDetails, street: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base"
+                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base"
                       />
                     </div>
                     <div>
@@ -361,7 +361,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.houseNumber}
                         onChange={(e) => setCustomerDetails({ ...customerDetails, houseNumber: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base"
+                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base"
                       />
                     </div>
                   </div>
@@ -376,7 +376,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.postalCode}
                         onChange={(e) => setCustomerDetails({ ...customerDetails, postalCode: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base"
+                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base"
                         placeholder="1234 AB"
                       />
                     </div>
@@ -389,7 +389,7 @@ export default function CheckoutPage() {
                         required
                         value={customerDetails.city}
                         onChange={(e) => setCustomerDetails({ ...customerDetails, city: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base"
+                        className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base"
                       />
                     </div>
                   </div>
@@ -401,7 +401,7 @@ export default function CheckoutPage() {
                     <select
                       value={customerDetails.country}
                       onChange={(e) => setCustomerDetails({ ...customerDetails, country: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5f98c1] focus:border-transparent text-base bg-white"
+                      className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent text-base bg-white"
                     >
                       <option value="NL">Nederland</option>
                       <option value="BE">België</option>
@@ -412,7 +412,7 @@ export default function CheckoutPage() {
                   <button
                     type="submit"
                     disabled={isCreatingPayment}
-                    className="w-full py-4 bg-[#5f98c1] text-white rounded-xl font-bold hover:bg-[#4a7da3] transition-colors text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-red-500 text-white rounded-xl font-bold hover:bg-red-600 transition-colors text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isCreatingPayment ? (
                       <>
@@ -432,12 +432,12 @@ export default function CheckoutPage() {
               <div className="bg-white rounded-2xl shadow-sm p-4 sm:p-6 md:p-8">
                 <div className="flex items-center justify-between mb-4 sm:mb-6">
                   <h2 className="text-lg sm:text-xl font-bold text-gray-900 flex items-center gap-2">
-                    <CreditCard className="w-5 h-5 sm:w-6 sm:h-6 text-[#5f98c1]" />
+                    <CreditCard className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
                     Betalen
                   </h2>
                   <button
                     onClick={() => setStep(1)}
-                    className="text-sm text-[#5f98c1] hover:underline"
+                    className="text-sm text-red-500 hover:underline"
                   >
                     Wijzigen
                   </button>
@@ -458,7 +458,7 @@ export default function CheckoutPage() {
                       appearance: {
                         theme: 'stripe',
                         variables: {
-                          colorPrimary: '#5f98c1',
+                          colorPrimary: '#ef4444',
                           borderRadius: '12px',
                           fontFamily: 'system-ui, sans-serif',
                         },

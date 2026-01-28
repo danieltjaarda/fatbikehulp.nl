@@ -407,7 +407,7 @@ export default function AanvraagPage() {
           {/* Klant gegevens */}
           <div className="bg-white shadow rounded-lg p-4 sm:p-6">
             <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 flex items-center">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
               Jouw gegevens
@@ -424,7 +424,7 @@ export default function AanvraagPage() {
                   required
                   value={formData.naam}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="Jan de Vries"
                 />
               </div>
@@ -439,7 +439,7 @@ export default function AanvraagPage() {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="jan@voorbeeld.nl"
                 />
               </div>
@@ -454,7 +454,7 @@ export default function AanvraagPage() {
                   required
                   value={formData.telefoon}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="06-12345678"
                 />
               </div>
@@ -464,7 +464,7 @@ export default function AanvraagPage() {
           {/* Aanvraag type */}
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Wat heb je nodig?
@@ -472,7 +472,7 @@ export default function AanvraagPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
           <label className={`relative cursor-pointer rounded-lg p-3 sm:p-4 border-2 transition-all ${
                 formData.aanvraagType === 'reparatie' 
-                  ? 'border-[#456882] bg-[#e8f0f5]' 
+                  ? 'border-red-500 bg-red-50' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}>
                 <input
@@ -484,7 +484,7 @@ export default function AanvraagPage() {
                   className="sr-only"
                 />
                 <div className="text-center">
-                  <svg className="w-8 h-8 mx-auto mb-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mx-auto mb-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -495,7 +495,7 @@ export default function AanvraagPage() {
 
               <label className={`relative cursor-pointer rounded-lg p-4 border-2 transition-all ${
                 formData.aanvraagType === 'onderhoud' 
-                  ? 'border-[#456882] bg-[#e8f0f5]' 
+                  ? 'border-red-500 bg-red-50' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}>
                 <input
@@ -507,7 +507,7 @@ export default function AanvraagPage() {
                   className="sr-only"
                 />
                 <div className="text-center">
-                  <svg className="w-8 h-8 mx-auto mb-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mx-auto mb-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div className="font-medium text-gray-900">Onderhoudsbeurt</div>
@@ -517,7 +517,7 @@ export default function AanvraagPage() {
 
               <label className={`relative cursor-pointer rounded-lg p-4 border-2 transition-all ${
                 formData.aanvraagType === 'beide' 
-                  ? 'border-[#456882] bg-[#e8f0f5]' 
+                  ? 'border-red-500 bg-red-50' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}>
                 <input
@@ -529,7 +529,7 @@ export default function AanvraagPage() {
                   className="sr-only"
                 />
                 <div className="text-center">
-                  <svg className="w-8 h-8 mx-auto mb-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mx-auto mb-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                   <div className="font-medium text-gray-900">Beide</div>
@@ -539,7 +539,7 @@ export default function AanvraagPage() {
 
               <label className={`relative cursor-pointer rounded-lg p-4 border-2 transition-all ${
                 formData.aanvraagType === 'offerte' 
-                  ? 'border-[#456882] bg-[#e8f0f5]' 
+                  ? 'border-red-500 bg-red-50' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}>
                 <input
@@ -551,7 +551,7 @@ export default function AanvraagPage() {
                   className="sr-only"
                 />
                 <div className="text-center">
-                  <svg className="w-8 h-8 mx-auto mb-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mx-auto mb-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   <div className="font-medium text-gray-900">Offerte aanvragen</div>
@@ -561,7 +561,7 @@ export default function AanvraagPage() {
 
               <label className={`relative cursor-pointer rounded-lg p-4 border-2 transition-all ${
                 formData.aanvraagType === 'bel_afspraak' 
-                  ? 'border-[#456882] bg-[#e8f0f5]' 
+                  ? 'border-red-500 bg-red-50' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}>
                 <input
@@ -573,7 +573,7 @@ export default function AanvraagPage() {
                   className="sr-only"
                 />
                 <div className="text-center">
-                  <svg className="w-8 h-8 mx-auto mb-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mx-auto mb-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <div className="font-medium text-gray-900">Bel afspraak</div>
@@ -587,7 +587,7 @@ export default function AanvraagPage() {
           {formData.aanvraagType === 'onderhoud' || formData.aanvraagType === 'beide' ? (
             <div className="bg-white shadow rounded-lg p-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                <svg className="w-6 h-6 mr-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Kies je onderhoudsbeurt pakket
@@ -598,7 +598,7 @@ export default function AanvraagPage() {
                 {/* BASIC Pakket */}
                 <label className={`relative cursor-pointer rounded-lg p-6 border-2 transition-all ${
                   formData.onderhoudsbeurtPakket === 'basic' 
-                    ? 'border-[#456882] bg-[#e8f0f5]' 
+                    ? 'border-red-500 bg-red-50' 
                     : 'border-gray-200 hover:border-gray-300'
                 }`}>
                   <input
@@ -647,7 +647,7 @@ export default function AanvraagPage() {
                 {/* PREMIUM Pakket */}
                 <label className={`relative cursor-pointer rounded-lg p-6 border-2 transition-all bg-teal-50 ${
                   formData.onderhoudsbeurtPakket === 'premium' 
-                    ? 'border-[#456882] bg-[#e8f0f5]' 
+                    ? 'border-red-500 bg-red-50' 
                     : 'border-gray-200 hover:border-gray-300'
                 }`}>
                   <input
@@ -726,7 +726,7 @@ export default function AanvraagPage() {
                 {/* DELUXE Pakket */}
                 <label className={`relative cursor-pointer rounded-lg p-6 border-2 transition-all ${
                   formData.onderhoudsbeurtPakket === 'deluxe' 
-                    ? 'border-[#456882] bg-[#e8f0f5]' 
+                    ? 'border-red-500 bg-red-50' 
                     : 'border-gray-200 hover:border-gray-300'
                 }`}>
                   <input
@@ -821,7 +821,7 @@ export default function AanvraagPage() {
           {/* Fiets informatie */}
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
               Fiets informatie
@@ -838,7 +838,7 @@ export default function AanvraagPage() {
                   required
                   value={formData.fietsMerk}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="Gazelle, Batavus, etc."
                 />
               </div>
@@ -852,7 +852,7 @@ export default function AanvraagPage() {
                   name="fietsModel"
                   value={formData.fietsModel}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="Orange C7, E-go, etc."
                 />
               </div>
@@ -866,7 +866,7 @@ export default function AanvraagPage() {
                   name="fietsJaar"
                   value={formData.fietsJaar}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="2020"
                   min="1900"
                   max="2025"
@@ -879,7 +879,7 @@ export default function AanvraagPage() {
           {formData.aanvraagType === 'reparatie' || formData.aanvraagType === 'beide' ? (
             <div className="bg-white shadow rounded-lg p-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                <svg className="w-6 h-6 mr-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
                 Probleem beschrijving
@@ -896,7 +896,7 @@ export default function AanvraagPage() {
                     required
                     value={formData.probleem}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                     placeholder="Bijv. ketting valt eraf, remmen maken geluid"
                   />
                 </div>
@@ -910,7 +910,7 @@ export default function AanvraagPage() {
                     rows={4}
                     value={formData.beschrijving}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                     placeholder="Beschrijf het probleem zo gedetailleerd mogelijk..."
                   />
                 </div>
@@ -924,7 +924,7 @@ export default function AanvraagPage() {
                     name="foto"
                     accept="image/*"
                     onChange={handleFileChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                   />
                   {formData.foto && (
                     <p className="mt-1 text-sm text-gray-500">
@@ -940,7 +940,7 @@ export default function AanvraagPage() {
           {/* Locatie keuze */}
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
@@ -949,7 +949,7 @@ export default function AanvraagPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <label className={`relative cursor-pointer rounded-lg p-6 border-2 transition-all ${
                 formData.locatieType === 'in_winkel' 
-                  ? 'border-[#456882] bg-[#e8f0f5]' 
+                  ? 'border-red-500 bg-red-50' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}>
                 <input
@@ -961,7 +961,7 @@ export default function AanvraagPage() {
                   className="sr-only"
                 />
                 <div className="text-center">
-                  <svg className="w-12 h-12 mx-auto mb-3 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 mx-auto mb-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
               <div className="font-medium text-gray-900">In de winkel</div>
@@ -971,7 +971,7 @@ export default function AanvraagPage() {
 
               <label className={`relative cursor-pointer rounded-lg p-6 border-2 transition-all ${
                 formData.locatieType === 'op_locatie' 
-                  ? 'border-[#456882] bg-[#e8f0f5]' 
+                  ? 'border-red-500 bg-red-50' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}>
                 <input
@@ -983,7 +983,7 @@ export default function AanvraagPage() {
                   className="sr-only"
                 />
                 <div className="text-center">
-                  <svg className="w-12 h-12 mx-auto mb-3 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 mx-auto mb-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
               <div className="font-medium text-gray-900">Op locatie</div>
@@ -1006,7 +1006,7 @@ export default function AanvraagPage() {
                     required
                     value={formData.adres}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                     placeholder="Straatnaam 123"
                   />
                 </div>
@@ -1021,7 +1021,7 @@ export default function AanvraagPage() {
                     required
                     value={formData.postcode}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                     placeholder="1234 AB"
                   />
                 </div>
@@ -1036,7 +1036,7 @@ export default function AanvraagPage() {
                     required
                     value={formData.plaats}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                     placeholder="Amsterdam"
                   />
                 </div>
@@ -1047,7 +1047,7 @@ export default function AanvraagPage() {
           {/* Voorkeur datum en tijd */}
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               Wanneer past het jou?
@@ -1063,7 +1063,7 @@ export default function AanvraagPage() {
                   name="voorkeurDatum"
                   value={formData.voorkeurDatum}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                 />
               </div>
               <div>
@@ -1075,7 +1075,7 @@ export default function AanvraagPage() {
                   name="voorkeurTijd"
                   value={formData.voorkeurTijd}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                 >
                   <option value="">Selecteer tijd...</option>
                   <option value="ochtend">Ochtend (9:00-12:00)</option>
@@ -1090,7 +1090,7 @@ export default function AanvraagPage() {
           {/* Extra opmerkingen */}
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10m0 0V6a2 2 0 00-2-2H9a2 2 0 00-2 2v2m0 0v8a2 2 0 002 2h6a2 2 0 002-2V8M9 12h6" />
               </svg>
               Extra opmerkingen
@@ -1105,7 +1105,7 @@ export default function AanvraagPage() {
                 rows={3}
                 value={formData.opmerkingen}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-[#456882] focus:border-[#456882]"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500"
                 placeholder="Bijv. specifieke wensen, toegankelijkheid, etc."
               />
             </div>
@@ -1122,12 +1122,12 @@ export default function AanvraagPage() {
                   required
                   checked={formData.akkoordPrivacy}
                   onChange={handleInputChange}
-                  className="w-4 h-4 text-[#456882] border-gray-300 rounded focus:ring-[#456882] focus:ring-2"
+                  className="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-red-500 focus:ring-2"
                 />
               </div>
               <div className="ml-3 text-sm">
                 <label htmlFor="akkoordPrivacy" className="font-medium text-gray-700 cursor-pointer">
-                  Ik ga akkoord met het <Link href="/privacybeleid" target="_blank" className="text-[#456882] hover:underline font-semibold">privacybeleid</Link> *
+                  Ik ga akkoord met het <Link href="/privacybeleid" target="_blank" className="text-red-500 hover:underline font-semibold">privacybeleid</Link> *
                 </label>
               </div>
             </div>
@@ -1141,12 +1141,12 @@ export default function AanvraagPage() {
                   required
                   checked={formData.akkoordVoorwaarden}
                   onChange={handleInputChange}
-                  className="w-4 h-4 text-[#456882] border-gray-300 rounded focus:ring-[#456882] focus:ring-2"
+                  className="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-red-500 focus:ring-2"
                 />
               </div>
               <div className="ml-3 text-sm">
                 <label htmlFor="akkoordVoorwaarden" className="font-medium text-gray-700 cursor-pointer">
-                  Ik ga akkoord met de <Link href="/algemene-voorwaarden" target="_blank" className="text-[#456882] hover:underline font-semibold">algemene voorwaarden</Link> *
+                  Ik ga akkoord met de <Link href="/algemene-voorwaarden" target="_blank" className="text-red-500 hover:underline font-semibold">algemene voorwaarden</Link> *
                 </label>
               </div>
             </div>
@@ -1162,7 +1162,7 @@ export default function AanvraagPage() {
                   type="checkbox"
                   checked={formData.marketingNieuws}
                   onChange={handleInputChange}
-                  className="w-4 h-4 text-[#456882] border-gray-300 rounded focus:ring-[#456882] focus:ring-2"
+                  className="w-4 h-4 text-red-500 border-gray-300 rounded focus:ring-red-500 focus:ring-2"
                 />
               </div>
               <div className="ml-3 text-sm">
@@ -1192,7 +1192,7 @@ export default function AanvraagPage() {
             <button
               type="submit"
               disabled={submitting || !formData.aanvraagType || !formData.locatieType || !formData.akkoordPrivacy || !formData.akkoordVoorwaarden}
-              className="w-full px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base font-medium rounded-md text-white bg-[#456882] hover:bg-[#3a5a6f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#456882] disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base flex items-center justify-center gap-2"
+              className="w-full px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base flex items-center justify-center gap-2"
             >
               {submitting && (
                 <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -1302,7 +1302,7 @@ export default function AanvraagPage() {
             <div className="bg-white text-gray-900 p-6 sm:p-8 rounded-t-3xl border-b border-gray-100">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#456882] rounded-2xl flex items-center justify-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-500 rounded-2xl flex items-center justify-center">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
@@ -1345,7 +1345,7 @@ export default function AanvraagPage() {
 
               <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 mt-4 sm:mt-6">
                 <div className="flex items-center space-x-2 sm:space-x-3 mb-2 sm:mb-3">
-                  <div className="w-8 h-8 bg-[#456882] rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
@@ -1360,7 +1360,7 @@ export default function AanvraagPage() {
             <div className="bg-gray-50 px-6 sm:px-8 py-4 sm:py-6 rounded-b-3xl">
               <button
                 onClick={handleCloseWelcomeModal}
-                className="w-full border-2 border-[#456882] text-[#456882] hover:bg-[#456882] hover:text-white font-semibold py-3 sm:py-4 px-6 rounded-2xl transition-all duration-200 text-base sm:text-lg"
+                className="w-full border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-semibold py-3 sm:py-4 px-6 rounded-2xl transition-all duration-200 text-base sm:text-lg"
               >
                 Begrepen, ga door!
               </button>
@@ -1374,7 +1374,7 @@ export default function AanvraagPage() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-[#456882] to-[#3a5a6f] px-6 py-6">
+            <div className="bg-gradient-to-r from-red-500 to-red-600 px-6 py-6">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-1">Laatste vraag!</h2>
@@ -1401,7 +1401,7 @@ export default function AanvraagPage() {
                 <button
                   onClick={() => submitWithPlatform('google')}
                   disabled={submitting}
-                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-[#456882] hover:bg-[#e8f0f5] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-red-500 hover:bg-red-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <svg className="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -1415,9 +1415,9 @@ export default function AanvraagPage() {
                 <button
                   onClick={() => submitWithPlatform('gofatbike.nl')}
                   disabled={submitting}
-                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-[#456882] hover:bg-[#e8f0f5] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-red-500 hover:bg-red-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <svg className="w-8 h-8 mb-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mb-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                   <span className="text-sm font-medium text-gray-900">Gofatbike.nl</span>
@@ -1426,7 +1426,7 @@ export default function AanvraagPage() {
                 <button
                   onClick={() => submitWithPlatform('instagram')}
                   disabled={submitting}
-                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-[#456882] hover:bg-[#e8f0f5] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-red-500 hover:bg-red-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <svg className="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -1437,7 +1437,7 @@ export default function AanvraagPage() {
                 <button
                   onClick={() => submitWithPlatform('tiktok')}
                   disabled={submitting}
-                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-[#456882] hover:bg-[#e8f0f5] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-red-500 hover:bg-red-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <svg className="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
@@ -1448,7 +1448,7 @@ export default function AanvraagPage() {
                 <button
                   onClick={() => submitWithPlatform('facebook')}
                   disabled={submitting}
-                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-[#456882] hover:bg-[#e8f0f5] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-red-500 hover:bg-red-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <svg className="w-8 h-8 mb-2 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -1459,9 +1459,9 @@ export default function AanvraagPage() {
                 <button
                   onClick={() => submitWithPlatform('mond_op_mond')}
                   disabled={submitting}
-                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-[#456882] hover:bg-[#e8f0f5] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex flex-col items-center justify-center p-4 border-2 border-gray-200 rounded-lg hover:border-red-500 hover:bg-red-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <svg className="w-8 h-8 mb-2 text-[#456882]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 mb-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                   <span className="text-sm font-medium text-gray-900">Mond op mond</span>

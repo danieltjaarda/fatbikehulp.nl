@@ -128,11 +128,9 @@ export default function Header() {
           <div className="flex items-center justify-between py-4">
             {/* Logo - Left aligned on all screens */}
             <Link href="/" className="flex items-center">
-              <Image 
-                src="/fatbikehulp-logo-3.png" 
+              <img 
+                src="/logofatbikehulp.svg" 
                 alt="Fatbikehulp.nl logo - Professionele fatbike reparatie en onderhoud service" 
-                width={200}
-                height={80}
                 className="h-8 sm:h-10 lg:h-12 w-auto"
               />
             </Link>
@@ -247,7 +245,7 @@ export default function Header() {
 
               {/* Aanvragen Button */}
               <Link href="/aanvraag">
-                <button className="text-white px-4 sm:px-6 py-2 rounded-full font-semibold transition-colors text-sm sm:text-base" style={{ backgroundColor: '#456882' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a5a6f'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#456882'}>
+                <button className="text-black px-4 sm:px-6 py-2 rounded-full font-semibold transition-colors text-sm sm:text-base" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
                   Aanvragen
                 </button>
               </Link>
@@ -274,7 +272,7 @@ export default function Header() {
       {/* Navigation Bar - Desktop Only */}
       <div className="hidden lg:block relative z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="bg-brand-menu rounded-2xl px-6">
+          <nav className="rounded-2xl px-6" style={{ backgroundColor: '#212121' }}>
             <div className="flex items-center justify-between">
               <Link href="/onderhoud">
                 <button className="text-white px-3 py-3 font-bold hover:bg-white/10 transition-colors whitespace-nowrap rounded-lg">
@@ -329,11 +327,9 @@ export default function Header() {
         <div className="lg:hidden fixed inset-0 z-50 bg-black/50" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="absolute top-0 left-0 w-4/5 max-w-sm h-full bg-white shadow-xl" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <Image 
-                src="/fatbikehulp-logo-3.png" 
+              <img 
+                src="/logofatbikehulp.svg" 
                 alt="Fatbikehulp.nl logo" 
-                width={150}
-                height={60}
                 className="h-8 w-auto"
               />
               <button 
@@ -511,7 +507,7 @@ export default function Header() {
                       Bellen
                     </a>
                     <Link href="/aanvraag" onClick={() => setIsMobileMenuOpen(false)}>
-                      <button className="text-white px-6 py-3 rounded-full font-semibold transition-colors" style={{ backgroundColor: '#456882' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a5a6f'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#456882'}>
+                      <button className="text-black px-6 py-3 rounded-full font-semibold transition-colors" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
                         Aanvragen
                       </button>
                     </Link>
@@ -578,5 +574,3 @@ export default function Header() {
     </header>
   )
 }
-
-

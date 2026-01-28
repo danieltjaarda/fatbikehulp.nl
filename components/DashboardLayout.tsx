@@ -10,7 +10,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const pathname = usePathname()
   
   // Dashboard routes that should not show Header/Breadcrumbs/WhatsApp/CookieConsent
-  const dashboardRoutes = ['/dashboard', '/reparaties', '/klanten', '/orders', '/settings', '/analytics', '/marketing', '/login', '/monteur']
+  const dashboardRoutes = ['/dashboard', '/reparaties', '/klanten', '/orders', '/settings', '/analytics', '/marketing', '/login', '/monteur', '/checkout']
   const isDashboardRoute = dashboardRoutes.some(route => pathname?.startsWith(route))
   
   if (isDashboardRoute) {

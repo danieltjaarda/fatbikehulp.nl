@@ -130,7 +130,7 @@ export default function CartDrawer() {
             {/* Checkout Button */}
             <button
               onClick={handleCheckout}
-              className="w-full py-4 bg-[#5f98c1] text-white rounded-xl font-semibold hover:bg-[#4a7da3] transition-colors flex items-center justify-center gap-2"
+              className="w-full py-4 bg-yellow-400 text-gray-900 rounded-xl font-semibold hover:bg-yellow-500 transition-colors flex items-center justify-center gap-2"
             >
               Afrekenen
               <span className="text-sm font-normal">(€{total.toFixed(2)})</span>
