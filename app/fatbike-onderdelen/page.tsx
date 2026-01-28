@@ -579,7 +579,7 @@ export default function FatbikeOnderdelenPage() {
                             Snelste levering NL & BE
                           </h3>
                           <p className="text-white/90 text-base sm:text-lg mb-6 max-w-xl">
-                            Bestel voor 23:59 en ontvang je onderdelen morgen al in huis. Gratis verzending vanaf €50.
+                            Bestel voor 23:59 en ontvang je onderdelen morgen al in huis. Gratis verzending vanaf €75.
                           </p>
                           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                             <div className="flex items-center gap-2 text-white">

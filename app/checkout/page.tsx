@@ -541,9 +541,9 @@ export default function CheckoutPage() {
                   <span className="text-gray-600">Verzendkosten</span>
                   <span>{shippingCost === 0 ? <span className="text-green-600">Gratis</span> : `€${shippingCost.toFixed(2)}`}</span>
                 </div>
-                {subtotal < 50 && shippingCost > 0 && (
+                {subtotal < 75 && shippingCost > 0 && (
                   <p className="text-xs text-gray-500">
-                    Nog €{(50 - subtotal).toFixed(2)} voor gratis verzending
+                    Nog €{(75 - subtotal).toFixed(2)} voor gratis verzending
                   </p>
                 )}
                 <div className="flex justify-between text-lg font-bold pt-2 border-t">

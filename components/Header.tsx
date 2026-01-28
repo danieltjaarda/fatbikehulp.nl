@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState, useEffect, useCallback } from 'react'
 import { ShoppingCart, Package } from 'lucide-react'
 import { useCart } from '@/lib/cart-context'
@@ -34,6 +35,7 @@ interface SearchResult {
 }
 
 export default function Header() {
+  const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isAccessoiresOpen, setIsAccessoiresOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
@@ -42,6 +44,9 @@ export default function Header() {
   const [products, setProducts] = useState<Product[]>([])
   const [isSearching, setIsSearching] = useState(false)
   const { itemCount, setIsOpen } = useCart()
+  
+  const isHomepage = pathname === '/'
+  const isAanvraagPage = pathname === '/aanvraag' || pathname?.startsWith('/aanvraag/')
 
   // Fetch products on mount for search
   useEffect(() => {
@@ -128,10 +133,17 @@ export default function Header() {
           <div className="flex items-center justify-between py-4">
             {/* Logo - Left aligned on all screens */}
             <Link href="/" className="flex items-center">
+              {/* Mobile Logo */}
+              <img 
+                src="/producten/logofatbikehulpmobile.jpg" 
+                alt="Fatbikehulp.nl logo - Professionele fatbike reparatie en onderhoud service" 
+                className="h-8 sm:h-10 lg:hidden w-auto"
+              />
+              {/* Desktop Logo */}
               <img 
                 src="/logofatbikehulp.svg" 
                 alt="Fatbikehulp.nl logo - Professionele fatbike reparatie en onderhoud service" 
-                className="h-8 sm:h-10 lg:h-12 w-auto"
+                className="hidden lg:block h-12 w-auto"
               />
             </Link>
 
@@ -243,12 +255,14 @@ export default function Header() {
                 )}
               </button>
 
-              {/* Aanvragen Button */}
-              <Link href="/aanvraag">
-                <button className="text-black px-4 sm:px-6 py-2 rounded-full font-semibold transition-colors text-sm sm:text-base" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
-                  Aanvragen
-                </button>
-              </Link>
+              {/* Aanvragen Button - Hidden on homepage and aanvraag page */}
+              {!isHomepage && !isAanvraagPage && (
+                <Link href="/aanvraag">
+                  <button className="text-black px-4 sm:px-6 py-2 rounded-full font-semibold transition-colors text-sm sm:text-base" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
+                    Aanvragen
+                  </button>
+                </Link>
+              )}
 
               {/* Hamburger Menu Button - Mobile Only */}
               <button 
@@ -328,7 +342,7 @@ export default function Header() {
           <div className="absolute top-0 left-0 w-4/5 max-w-sm h-full bg-white shadow-xl" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <img 
-                src="/logofatbikehulp.svg" 
+                src="/producten/logofatbikehulpmobile.jpg" 
                 alt="Fatbikehulp.nl logo" 
                 className="h-8 w-auto"
               />
@@ -506,11 +520,13 @@ export default function Header() {
                       </svg>
                       Bellen
                     </a>
-                    <Link href="/aanvraag" onClick={() => setIsMobileMenuOpen(false)}>
-                      <button className="text-black px-6 py-3 rounded-full font-semibold transition-colors" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
-                        Aanvragen
-                      </button>
-                    </Link>
+                    {!isHomepage && !isAanvraagPage && (
+                      <Link href="/aanvraag" onClick={() => setIsMobileMenuOpen(false)}>
+                        <button className="text-black px-6 py-3 rounded-full font-semibold transition-colors" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
+                          Aanvragen
+                        </button>
+                      </Link>
+                    )}
                   </div>
                 </div>
 

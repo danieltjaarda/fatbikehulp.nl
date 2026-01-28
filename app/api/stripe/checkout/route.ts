@@ -20,8 +20,8 @@ export async function POST(request: NextRequest) {
       sum + (item.price * item.quantity), 0
     )
     
-    // Free shipping above €50, otherwise €4.95
-    const shippingCost = subtotal >= 50 ? 0 : 4.95
+    // Free shipping above €75, otherwise €7.95
+    const shippingCost = subtotal >= 75 ? 0 : 7.95
 
     // Create line items for Stripe
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map((item: {

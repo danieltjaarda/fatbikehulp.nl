@@ -123,10 +123,21 @@ export default function CartDrawer() {
                 <span className="text-gray-600">Verzendkosten</span>
                 <span>{shippingCost === 0 ? <span className="text-green-600">Gratis!</span> : `€${shippingCost.toFixed(2)}`}</span>
               </div>
-              {subtotal < 50 && (
-                <p className="text-xs text-gray-500">
-                  Nog €{(50 - subtotal).toFixed(2)} voor gratis verzending
-                </p>
+              {subtotal < 75 && (
+                <div className="pt-2 mt-2 border-t border-gray-200">
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs text-gray-600">
+                      <span>Nog €{(75 - subtotal).toFixed(2)} voor gratis verzending</span>
+                      <span>{Math.round((subtotal / 75) * 100)}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div 
+                        className="bg-yellow-400 h-2.5 rounded-full transition-all duration-300"
+                        style={{ width: `${Math.min((subtotal / 75) * 100, 100)}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
               )}
               <div className="flex justify-between text-lg font-bold pt-2 border-t">
                 <span>Totaal</span>
