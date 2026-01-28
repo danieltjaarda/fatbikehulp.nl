@@ -12,7 +12,7 @@ module.exports = {
         'brand-medium': '#70B2B2',
         'brand-light': '#9ECFD4',
         'brand-cream': '#E5E9C5',
-        'brand-menu': '#234C6A',
+        'brand-menu': '#B22D23',
       },
       fontFamily: {
         sans: ['Nunito', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
