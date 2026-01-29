@@ -827,7 +827,7 @@ export default function ReparatieStadPage({ params }: PageProps) {
               WhatsApp
             </a>
             <Link href="/aanvraag">
-              <button className="w-full sm:w-auto text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors bg-[#456882] hover:bg-[#3a5a6f]">
+              <button className="w-full sm:w-auto text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors bg-blue-600 hover:bg-blue-700">
                 Plan reparatie
               </button>
             </Link>

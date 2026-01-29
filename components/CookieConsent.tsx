@@ -160,7 +160,7 @@ export default function CookieConsent() {
                 onClick={() => setShowSettings(true)}
                 style={{
                   fontSize: '0.875rem',
-                  color: '#016B61',
+                  color: '#2563eb',
                   fontWeight: 600,
                   background: 'none',
                   border: 'none',
@@ -209,15 +209,15 @@ export default function CookieConsent() {
                   fontSize: '0.875rem',
                   fontWeight: 600,
                   color: '#ffffff',
-                  backgroundColor: '#016B61',
+                  backgroundColor: '#2563eb',
                   borderRadius: '0.5rem',
                   border: 'none',
                   cursor: 'pointer',
                   transition: 'background-color 0.15s ease-in-out',
                   whiteSpace: 'nowrap',
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#015a52'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#016B61'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1d4ed8'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2563eb'}
               >
                 Alles accepteren
               </button>
@@ -298,7 +298,7 @@ export default function CookieConsent() {
                     width: '2.75rem',
                     alignItems: 'center',
                     borderRadius: '9999px',
-                    backgroundColor: preferences.analytics_storage === 'granted' ? '#016B61' : '#d1d5db',
+                    backgroundColor: preferences.analytics_storage === 'granted' ? '#2563eb' : '#d1d5db',
                     border: 'none',
                     cursor: 'pointer',
                     transition: 'background-color 0.15s ease-in-out',
@@ -346,7 +346,7 @@ export default function CookieConsent() {
                     width: '2.75rem',
                     alignItems: 'center',
                     borderRadius: '9999px',
-                    backgroundColor: preferences.ad_storage === 'granted' ? '#016B61' : '#d1d5db',
+                    backgroundColor: preferences.ad_storage === 'granted' ? '#2563eb' : '#d1d5db',
                     border: 'none',
                     cursor: 'pointer',
                     transition: 'background-color 0.15s ease-in-out',
@@ -394,7 +394,7 @@ export default function CookieConsent() {
                     width: '2.75rem',
                     alignItems: 'center',
                     borderRadius: '9999px',
-                    backgroundColor: preferences.personalization_storage === 'granted' ? '#016B61' : '#d1d5db',
+                    backgroundColor: preferences.personalization_storage === 'granted' ? '#2563eb' : '#d1d5db',
                     border: 'none',
                     cursor: 'pointer',
                     transition: 'background-color 0.15s ease-in-out',
@@ -450,14 +450,14 @@ export default function CookieConsent() {
                   fontSize: '0.875rem',
                   fontWeight: 600,
                   color: '#ffffff',
-                  backgroundColor: '#016B61',
+                  backgroundColor: '#2563eb',
                   borderRadius: '0.5rem',
                   border: 'none',
                   cursor: 'pointer',
                   transition: 'background-color 0.15s ease-in-out',
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#015a52'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#016B61'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1d4ed8'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2563eb'}
               >
                 Voorkeuren opslaan
               </button>

@@ -133,17 +133,10 @@ export default function Header() {
           <div className="flex items-center justify-between py-4">
             {/* Logo - Left aligned on all screens */}
             <Link href="/" className="flex items-center">
-              {/* Mobile Logo */}
               <img 
-                src="/producten/logofatbikehulpmobile.jpg" 
+                src="/producten/fatbikhulp-logo-5.png" 
                 alt="Fatbikehulp.nl logo - Professionele fatbike reparatie en onderhoud service" 
-                className="h-8 sm:h-10 lg:hidden w-auto"
-              />
-              {/* Desktop Logo */}
-              <img 
-                src="/logofatbikehulp.svg" 
-                alt="Fatbikehulp.nl logo - Professionele fatbike reparatie en onderhoud service" 
-                className="hidden lg:block h-12 w-auto"
+                className="h-8 sm:h-10 lg:h-12 w-auto"
               />
             </Link>
 
@@ -342,7 +335,7 @@ export default function Header() {
           <div className="absolute top-0 left-0 w-4/5 max-w-sm h-full bg-white shadow-xl" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <img 
-                src="/producten/logofatbikehulpmobile.jpg" 
+                src="/producten/fatbikhulp-logo-5.png" 
                 alt="Fatbikehulp.nl logo" 
                 className="h-8 w-auto"
               />
@@ -513,7 +506,7 @@ export default function Header() {
                   <div className="flex flex-col items-center gap-3">
                     <a
                       href="tel:31850604213"
-                      className="bg-[#456882] hover:bg-[#3a5a6f] text-white px-6 py-3 rounded-full font-semibold text-center transition-colors flex items-center justify-center gap-2"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold text-center transition-colors flex items-center justify-center gap-2"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

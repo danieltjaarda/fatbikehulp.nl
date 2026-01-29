@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-dark': '#016B61',
-        'brand-medium': '#70B2B2',
-        'brand-light': '#9ECFD4',
+        'brand-dark': '#2563eb',      // Donkerblauw (blue-600)
+        'brand-medium': '#3b82f6',    // Medium blauw (blue-500)
+        'brand-light': '#60a5fa',     // Lichtblauw (blue-400)
         'brand-cream': '#E5E9C5',
-        'brand-menu': '#B22D23',
+        'brand-menu': '#1e40af',      // Donkerblauw voor menu (blue-800)
       },
       fontFamily: {
         sans: ['Nunito', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],

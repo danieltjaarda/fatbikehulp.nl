@@ -12,7 +12,7 @@ export default function Footer() {
               <Link href="/">
                 <div className="inline-block">
                   <Image 
-                    src="/producten/fatbikehulp-logo-footer-3.png" 
+                    src="/producten/footer-logo-3.png" 
                     alt="Fatbikehulp Logo" 
                     width={180}
                     height={60}

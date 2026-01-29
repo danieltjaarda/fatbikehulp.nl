@@ -446,14 +446,14 @@ export default function ProductDetailPage() {
                   alt="Klantenservice medewerker" 
                   className="absolute left-4 -top-4 w-20 h-auto object-contain z-10"
                 />
-                <div className="bg-[#b22d23] rounded-3xl p-4 flex items-center gap-4 relative">
+                <div className="rounded-3xl p-4 flex items-center gap-4 relative" style={{ backgroundColor: '#0c4fa3' }}>
                   <div className="w-20 flex-shrink-0"></div>
                   <div className="flex-1">
                     <p className="text-white font-semibold text-sm">Hulp nodig bij je keuze?</p>
                     <p className="text-white/80 text-xs">Onze experts helpen je graag!</p>
                   </div>
                   <a href="tel:+31850604213">
-                    <button className="bg-white text-[#b22d23] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2">
+                    <button className="bg-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2" style={{ color: '#0c4fa3' }}>
                       <Phone className="w-4 h-4" />
                       Bel ons
                     </button>

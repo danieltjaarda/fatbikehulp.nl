@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     apple: '/producten/faviconlogo2.png',
   },
   other: {
-    'msapplication-TileColor': '#016B61',
-    'theme-color': '#016B61',
+    'msapplication-TileColor': '#2563eb',
+    'theme-color': '#2563eb',
   },
 }
 
@@ -137,16 +137,16 @@ export default function RootLayout({
             .bg-white{background-color:#fff}
             .bg-gray-50{background-color:#f9fafb}
             .bg-gray-100{background-color:#f3f4f6}
-            .bg-brand-dark{background-color:#016B61}
-            .bg-brand-menu{background-color:#234C6A}
-            .bg-brand-medium{background-color:#70B2B2}
-            .bg-brand-light{background-color:#9ECFD4}
+            .bg-brand-dark{background-color:#2563eb}
+            .bg-brand-menu{background-color:#1e40af}
+            .bg-brand-medium{background-color:#3b82f6}
+            .bg-brand-light{background-color:#60a5fa}
             .text-white{color:#fff}
             .text-black{color:#000}
             .text-gray-900{color:#111827}
             .text-gray-700{color:#374151}
             .text-gray-600{color:#4b5563}
-            .text-brand-dark{color:#016B61}
+            .text-brand-dark{color:#2563eb}
             .border-gray-100{border-color:#f3f4f6}
             .border-gray-200{border-color:#e5e7eb}
             .border-gray-300{border-color:#d1d5db}

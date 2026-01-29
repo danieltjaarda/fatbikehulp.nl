@@ -93,14 +93,14 @@ export default function LoqaterPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               <div className="bg-white border-2 border-black rounded-2xl p-6">
-                <div className="text-4xl font-bold mb-2" style={{ color: '#456882' }}>97%</div>
+                <div className="text-4xl font-bold mb-2" style={{ color: '#2563eb' }}>97%</div>
                 <h3 className="text-xl font-semibold mb-2" style={{ color: '#323232' }}>Terugvindkans</h3>
                 <p className="text-gray-700">
                   Met Loqater heeft u een terugvindkans van 97% bij diefstal van uw fatbike.
                 </p>
               </div>
               <div className="bg-white border-2 border-black rounded-2xl p-6">
-                <div className="text-4xl font-bold mb-2" style={{ color: '#456882' }}>3 jaar</div>
+                <div className="text-4xl font-bold mb-2" style={{ color: '#2563eb' }}>3 jaar</div>
                 <h3 className="text-xl font-semibold mb-2" style={{ color: '#323232' }}>Batterijduur</h3>
                 <p className="text-gray-700">
                   De batterij gaat 3 jaar lang mee, veel langer dan andere tracking systemen.
@@ -131,7 +131,7 @@ export default function LoqaterPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white border-2 border-black rounded-2xl p-6">
                 <div className="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-2xl font-bold" style={{ color: '#456882' }}>1</span>
+                  <span className="text-2xl font-bold" style={{ color: '#2563eb' }}>1</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-center" style={{ color: '#323232' }}>
                   Plaatsing op locatie
@@ -143,7 +143,7 @@ export default function LoqaterPage() {
               </div>
               <div className="bg-white border-2 border-black rounded-2xl p-6">
                 <div className="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-2xl font-bold" style={{ color: '#456882' }}>2</span>
+                  <span className="text-2xl font-bold" style={{ color: '#2563eb' }}>2</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-center" style={{ color: '#323232' }}>
                   Tracking via app
@@ -155,7 +155,7 @@ export default function LoqaterPage() {
               </div>
               <div className="bg-white border-2 border-black rounded-2xl p-6">
                 <div className="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-2xl font-bold" style={{ color: '#456882' }}>3</span>
+                  <span className="text-2xl font-bold" style={{ color: '#2563eb' }}>3</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-center" style={{ color: '#323232' }}>
                   Recovery bij diefstal
@@ -178,7 +178,7 @@ export default function LoqaterPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4" style={{ color: '#456882' }}>
+                  <h3 className="text-2xl font-semibold mb-4" style={{ color: '#2563eb' }}>
                     Loqater voordelen
                   </h3>
                   <ul className="space-y-3">
@@ -260,20 +260,20 @@ export default function LoqaterPage() {
               <div className="space-y-6">
                 <div className="flex justify-between items-center pb-4 border-b border-gray-200">
                   <span className="text-lg text-gray-700">Loqater peilzender</span>
-                  <span className="text-2xl font-bold" style={{ color: '#456882' }}>€120</span>
+                  <span className="text-2xl font-bold" style={{ color: '#2563eb' }}>€120</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-gray-200">
                   <span className="text-lg text-gray-700">Voorrijkosten (plaatsing op locatie)</span>
-                  <span className="text-2xl font-bold" style={{ color: '#456882' }}>€50</span>
+                  <span className="text-2xl font-bold" style={{ color: '#2563eb' }}>€50</span>
                 </div>
                 <div className="flex justify-between items-center pt-4">
                   <span className="text-xl font-semibold" style={{ color: '#323232' }}>Totaal eenmalig</span>
-                  <span className="text-3xl font-bold" style={{ color: '#456882' }}>€170</span>
+                  <span className="text-3xl font-bold" style={{ color: '#2563eb' }}>€170</span>
                 </div>
                 <div className="mt-6 pt-6 border-t-2 border-gray-300">
                   <div className="flex justify-between items-center">
                     <span className="text-lg text-gray-700">Maandelijks abonnement</span>
-                    <span className="text-2xl font-bold" style={{ color: '#456882' }}>€5/maand</span>
+                    <span className="text-2xl font-bold" style={{ color: '#2563eb' }}>€5/maand</span>
                   </div>
                   <p className="text-sm text-gray-600 mt-2">
                     Voor 24/7 monitoring, meldkamer en recovery service
@@ -285,7 +285,7 @@ export default function LoqaterPage() {
                   href="https://wa.me/31850604213"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors bg-[#456882] hover:bg-[#3a5a6f]"
+                  className="block w-full text-center text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors bg-[#2563eb] hover:bg-blue-700"
                 >
                   Aanvragen
                 </a>
