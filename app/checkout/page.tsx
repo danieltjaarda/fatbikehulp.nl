@@ -84,7 +84,7 @@ function CheckoutForm({ clientSecret, customerDetails, onSuccess }: {
       <button
         type="submit"
         disabled={!stripe || isProcessing}
-        className="w-full py-4 bg-red-500 text-white rounded-xl font-bold hover:bg-red-600 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
         {isProcessing ? (
           <>
@@ -251,15 +251,15 @@ export default function CheckoutPage() {
       <div className="bg-white border-b">
         <div className="max-w-6xl mx-auto px-4 py-3 sm:py-4">
           <div className="flex items-center justify-center gap-2 sm:gap-4">
-            <div className={`flex items-center gap-1.5 sm:gap-2 ${step >= 1 ? 'text-red-500' : 'text-gray-400'}`}>
-              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step >= 1 ? 'bg-red-500 text-white' : 'bg-gray-200'}`}>
+            <div className={`flex items-center gap-1.5 sm:gap-2 ${step >= 1 ? 'text-blue-600' : 'text-gray-400'}`}>
+              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step >= 1 ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>
                 {step > 1 ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : '1'}
               </div>
               <span className="text-sm sm:text-base font-medium">Gegevens</span>
             </div>
-            <div className={`w-8 sm:w-12 h-0.5 ${step >= 2 ? 'bg-red-500' : 'bg-gray-200'}`}></div>
-            <div className={`flex items-center gap-1.5 sm:gap-2 ${step >= 2 ? 'text-red-500' : 'text-gray-400'}`}>
-              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step >= 2 ? 'bg-red-500 text-white' : 'bg-gray-200'}`}>
+            <div className={`w-8 sm:w-12 h-0.5 ${step >= 2 ? 'bg-blue-600' : 'bg-gray-200'}`}></div>
+            <div className={`flex items-center gap-1.5 sm:gap-2 ${step >= 2 ? 'text-blue-600' : 'text-gray-400'}`}>
+              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold ${step >= 2 ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}>
                 2
               </div>
               <span className="text-sm sm:text-base font-medium">Betalen</span>
@@ -412,7 +412,7 @@ export default function CheckoutPage() {
                   <button
                     type="submit"
                     disabled={isCreatingPayment}
-                    className="w-full py-4 bg-red-500 text-white rounded-xl font-bold hover:bg-red-600 transition-colors text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isCreatingPayment ? (
                       <>

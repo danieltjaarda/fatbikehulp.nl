@@ -58,10 +58,10 @@ export default function Layout({ children }: LayoutProps) {
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-[#f6f6f7]">
       <Sidebar onLogout={handleLogout} />
       <main className="flex-1 overflow-x-hidden ml-0 lg:ml-64">
-        <div className="min-h-screen w-full">
+        <div className="min-h-screen w-full bg-[#f6f6f7]">
           {children}
         </div>
       </main>

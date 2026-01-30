@@ -250,11 +250,11 @@ export default function Header() {
 
               {/* Aanvragen Button - Hidden on homepage and aanvraag page */}
               {!isHomepage && !isAanvraagPage && (
-                <Link href="/aanvraag">
-                  <button className="text-black px-4 sm:px-6 py-2 rounded-full font-semibold transition-colors text-sm sm:text-base" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
-                    Aanvragen
-                  </button>
-                </Link>
+              <Link href="/aanvraag">
+                <button className="text-black px-4 sm:px-6 py-2 rounded-full font-semibold transition-colors text-sm sm:text-base" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
+                  Aanvragen
+                </button>
+              </Link>
               )}
 
               {/* Hamburger Menu Button - Mobile Only */}
@@ -514,11 +514,11 @@ export default function Header() {
                       Bellen
                     </a>
                     {!isHomepage && !isAanvraagPage && (
-                      <Link href="/aanvraag" onClick={() => setIsMobileMenuOpen(false)}>
-                        <button className="text-black px-6 py-3 rounded-full font-semibold transition-colors" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
-                          Aanvragen
-                        </button>
-                      </Link>
+                    <Link href="/aanvraag" onClick={() => setIsMobileMenuOpen(false)}>
+                      <button className="text-black px-6 py-3 rounded-full font-semibold transition-colors" style={{ backgroundColor: '#ffc702' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e6b302'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffc702'}>
+                        Aanvragen
+                      </button>
+                    </Link>
                     )}
                   </div>
                 </div>

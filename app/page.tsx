@@ -632,13 +632,22 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="bg-white py-8 sm:py-12 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="faq" className="bg-white py-8 sm:py-12 scroll-mt-20 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center" style={{ color: '#323232' }}>
             Veelgestelde vragen
           </h2>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto relative">
             <FAQ items={faqItems} />
+            {/* Subtiel logo achtergrond rechts van FAQ */}
+            <div className="hidden lg:block absolute left-full top-1/2 -translate-y-1/2 -ml-48 w-[400px] h-[400px] opacity-10 pointer-events-none">
+              <Image 
+                src="/producten/fatbikehulp-logo-233.png" 
+                alt="Fatbikehulp logo" 
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>

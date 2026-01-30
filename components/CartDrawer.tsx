@@ -1,32 +1,60 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { X, Minus, Plus, ShoppingCart, Trash2 } from 'lucide-react'
+import { X, Minus, Plus, ShoppingCart, Trash2, ArrowRight } from 'lucide-react'
 import { useCart } from '@/lib/cart-context'
 
 export default function CartDrawer() {
   const router = useRouter()
   const { items, removeItem, updateQuantity, clearCart, itemCount, subtotal, shippingCost, total, isOpen, setIsOpen } = useCart()
+  const [isClosing, setIsClosing] = useState(false)
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsClosing(false)
+    }
+  }, [isOpen])
+
+  const handleClose = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      setIsOpen(false)
+      setIsClosing(false)
+    }, 300) // Match animation duration
+  }
 
   const handleCheckout = () => {
     if (items.length === 0) return
-    setIsOpen(false)
-    router.push('/checkout')
+    handleClose()
+    setTimeout(() => {
+      router.push('/checkout')
+    }, 300)
   }
 
-  if (!isOpen) return null
+  if (!isOpen && !isClosing) return null
 
   return (
     <>
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/50 z-40 transition-opacity"
-        onClick={() => setIsOpen(false)}
+        className="fixed inset-0 bg-black/50 z-40 transition-opacity duration-300"
+        style={{ 
+          animation: isClosing ? 'fadeOut 0.3s ease-in-out' : 'fadeIn 0.3s ease-in-out',
+          opacity: isClosing ? 0 : 1
+        }}
+        onClick={handleClose}
       />
 
       {/* Drawer */}
-      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-xl z-50 flex flex-col">
+      <div 
+        className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-xl z-50 flex flex-col rounded-tl-3xl rounded-bl-3xl"
+        style={{ 
+          animation: isClosing ? 'slideOutRight 0.3s ease-in-out' : 'slideInRight 0.3s ease-in-out',
+          transform: isClosing ? 'translateX(100%)' : 'translateX(0)',
+          opacity: isClosing ? 0 : 1
+        }}
+      >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b">
           <div className="flex items-center gap-2">
@@ -34,7 +62,7 @@ export default function CartDrawer() {
             <h2 className="text-lg font-semibold">Winkelwagen ({itemCount})</h2>
           </div>
           <button
-            onClick={() => setIsOpen(false)}
+            onClick={handleClose}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
           >
             <X className="w-5 h-5" />
@@ -49,7 +77,7 @@ export default function CartDrawer() {
               <p className="text-gray-500 mb-4">Je winkelwagen is leeg</p>
               <a 
                 href="/fatbike-onderdelen"
-                onClick={() => setIsOpen(false)}
+                onClick={handleClose}
                 className="inline-block bg-red-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-600 transition-colors"
               >
                 Bekijk onderdelen
@@ -117,17 +145,17 @@ export default function CartDrawer() {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-gray-600">Subtotaal</span>
-                <span>€{subtotal.toFixed(2)}</span>
+                <span className="font-bold">€{subtotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Verzendkosten</span>
-                <span>{shippingCost === 0 ? <span className="text-green-600">Gratis!</span> : `€${shippingCost.toFixed(2)}`}</span>
+                <span className="font-bold">{shippingCost === 0 ? <span className="text-green-600 font-bold">Gratis!</span> : `€${shippingCost.toFixed(2)}`}</span>
               </div>
               {subtotal < 75 && (
                 <div className="pt-2 mt-2 border-t border-gray-200">
                   <div className="space-y-2">
                     <div className="flex justify-between text-xs text-gray-600">
-                      <span>Nog €{(75 - subtotal).toFixed(2)} voor gratis verzending</span>
+                      <span>Nog <span className="font-bold">€{(75 - subtotal).toFixed(2)}</span> voor <span className="font-bold">gratis verzending</span></span>
                       <span>{Math.round((subtotal / 75) * 100)}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -148,28 +176,29 @@ export default function CartDrawer() {
             {/* Checkout Button */}
             <button
               onClick={handleCheckout}
-              className="w-full py-4 bg-yellow-400 text-gray-900 rounded-xl font-semibold hover:bg-yellow-500 transition-colors flex items-center justify-center gap-2"
+              className="w-full py-4 rounded-full font-bold text-white text-xl hover:opacity-90 transition-opacity flex items-center justify-center relative overflow-hidden group"
+              style={{ backgroundColor: '#212121' }}
             >
-              Afrekenen
-              <span className="text-sm font-normal">(€{total.toFixed(2)})</span>
+              <div className="flex items-center gap-2 relative w-full justify-center">
+                {/* Text and price - slide out to right */}
+                <div className="flex items-center gap-2 transition-all duration-300 group-hover:translate-x-full group-hover:opacity-0">
+                  <span>Afrekenen</span>
+                  <span className="text-lg font-bold">(€{total.toFixed(2)})</span>
+                </div>
+                {/* Arrow - slide in from left */}
+                <ArrowRight className="w-6 h-6 absolute transition-all duration-300 -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+              </div>
             </button>
 
             {/* Trustpilot Widget */}
-            <div className="flex items-center justify-center gap-3 pt-3 border-t border-gray-100 mt-3">
+            <div className="flex items-center justify-center gap-2 pt-3 border-t border-gray-100 mt-3">
               <img 
-                src="/trustpilot-logo.png" 
-                alt="Trustpilot" 
-                className="h-5 w-auto"
+                src="/trustpilot-stars.png" 
+                alt="5 sterren" 
+                className="h-4 w-auto"
               />
-              <div className="flex items-center gap-1">
-                <img 
-                  src="/trustpilot-stars.png" 
-                  alt="5 sterren" 
-                  className="h-4 w-auto"
-                />
-                <span className="text-sm font-semibold text-gray-900">4.9</span>
-                <span className="text-xs text-gray-500">/ 132 reviews</span>
-              </div>
+              <span className="text-sm font-semibold text-gray-900">4.9</span>
+              <span className="text-xs text-gray-500">/ 132 reviews</span>
             </div>
           </div>
         )}

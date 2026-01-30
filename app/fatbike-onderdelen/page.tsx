@@ -514,6 +514,11 @@ export default function FatbikeOnderdelenPage() {
                               <ShoppingBag className="w-16 h-16 text-gray-300" />
                             </div>
                           )}
+                          {product.voorraad === 0 && (
+                            <div className="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                              Uitverkocht
+                            </div>
+                          )}
                         </div>
                         <div className="p-5">
                           <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">

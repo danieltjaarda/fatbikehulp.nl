@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowLeft, ShoppingBag, Check, X, Phone, ShoppingCart, Plus } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ShoppingBag, Check, X, Phone, ShoppingCart, Plus } from 'lucide-react'
 import { Product } from '@/types/database'
 import Footer from '@/components/Footer'
 import { useCart } from '@/lib/cart-context'
@@ -230,17 +230,20 @@ export default function ProductDetailPage() {
     <div className="min-h-screen bg-white">
       {/* Toast notification for added to cart */}
       <div 
-        className={`fixed top-4 left-4 z-50 transition-all duration-300 ease-out ${
+        className={`fixed top-6 left-6 z-50 transition-all duration-500 ease-out ${
           showAddedNotification 
-            ? 'translate-x-0 opacity-100' 
-            : '-translate-x-full opacity-0'
+            ? 'translate-y-0 opacity-100 scale-100' 
+            : '-translate-y-4 opacity-0 scale-95 pointer-events-none'
         }`}
       >
-        <div className="bg-green-500 text-white py-3 px-4 rounded-lg shadow-lg flex items-center gap-2 max-w-xs">
-          <Check className="w-5 h-5 flex-shrink-0" />
-          <span className="font-medium text-sm">
-            Toegevoegd aan winkelwagen
-          </span>
+        <div className="bg-white border-2 border-green-500 py-4 px-6 rounded-2xl shadow-2xl flex items-center gap-3 max-w-sm backdrop-blur-sm">
+          <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <Check className="w-6 h-6 text-white" strokeWidth={3} />
+          </div>
+          <div className="flex-1">
+            <p className="font-bold text-gray-900 text-base">Toegevoegd!</p>
+            <p className="text-sm text-gray-600 mt-0.5">Product is toegevoegd aan je winkelwagen</p>
+          </div>
         </div>
       </div>
 
@@ -272,6 +275,11 @@ export default function ProductDetailPage() {
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <ShoppingBag className="w-24 h-24 text-gray-300" />
+                  </div>
+                )}
+                {product.voorraad === 0 && (
+                  <div className="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                    Uitverkocht
                   </div>
                 )}
               </div>
@@ -374,36 +382,24 @@ export default function ProductDetailPage() {
                           price: product.prijs,
                           image: product.afbeelding_url,
                         })
-                        setAddedToCart(true)
                         setAddedProductName(product.naam)
                         setShowAddedNotification(true)
                         setTimeout(() => {
-                          setAddedToCart(false)
                           setShowAddedNotification(false)
-                        }, 2500)
+                        }, 3000)
                       }}
-                      className={`px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 ${
-                        addedToCart 
-                          ? 'bg-green-500 text-white' 
-                          : 'bg-gray-900 text-white hover:bg-gray-800'
-                      }`}
+                      className="px-6 py-3 rounded-full font-semibold transition-colors flex items-center gap-2 relative overflow-hidden group bg-gray-900 text-white hover:bg-gray-800"
                     >
-                      {addedToCart ? (
-                        <>
-                          <Check className="w-5 h-5" />
-                          Toegevoegd!
-                        </>
-                      ) : (
-                        <>
-                          <ShoppingCart className="w-5 h-5" />
-                          <span className="font-bold">In winkelwagen</span>
-                        </>
-                      )}
+                      <div className="relative w-5 h-5">
+                        <ShoppingCart className="w-5 h-5 absolute inset-0 transition-all duration-300 group-hover:translate-x-full group-hover:opacity-0" />
+                        <ArrowRight className="w-5 h-5 absolute inset-0 transition-all duration-300 -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                      </div>
+                      <span className="font-bold">In winkelwagen</span>
                     </button>
                   ) : (
                     <button 
                       disabled
-                      className="px-6 py-3 bg-gray-300 text-gray-500 rounded-lg font-semibold cursor-not-allowed"
+                      className="px-6 py-3 bg-gray-300 text-gray-500 rounded-full font-semibold cursor-not-allowed"
                     >
                       Uitverkocht
                     </button>
@@ -435,7 +431,17 @@ export default function ProductDetailPage() {
                   <svg className="w-4 h-4 flex-shrink-0" style={{ color: '#008500' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Achteraf betalen met <strong>Klarna</strong>? Ook dat kan.</span>
+                  <span className="flex items-center gap-1.5">
+                    Achteraf betalen met 
+                    <Image 
+                      src="/producten/klarna-logo.png" 
+                      alt="Klarna" 
+                      width={120}
+                      height={40}
+                      className="h-10 w-auto"
+                    />
+                    ? Ook dat kan.
+                  </span>
                 </div>
               </div>
 
@@ -453,7 +459,7 @@ export default function ProductDetailPage() {
                     <p className="text-white/80 text-xs">Onze experts helpen je graag!</p>
                   </div>
                   <a href="tel:+31850604213">
-                    <button className="bg-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2" style={{ color: '#0c4fa3' }}>
+                    <button className="bg-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2" style={{ color: '#0c4fa3' }}>
                       <Phone className="w-4 h-4" />
                       Bel ons
                     </button>
@@ -823,9 +829,12 @@ export default function ProductDetailPage() {
                   setShowAddedNotification(true)
                   setTimeout(() => setShowAddedNotification(false), 2500)
                 }}
-                className="px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-semibold transition-colors flex items-center gap-2 flex-shrink-0"
+                className="px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full font-semibold transition-colors flex items-center gap-2 flex-shrink-0 relative overflow-hidden group"
               >
-                <ShoppingCart className="w-5 h-5" />
+                <div className="relative w-5 h-5">
+                  <ShoppingCart className="w-5 h-5 absolute inset-0 transition-all duration-300 group-hover:translate-x-full group-hover:opacity-0" />
+                  <ArrowRight className="w-5 h-5 absolute inset-0 transition-all duration-300 -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100" />
+                </div>
                 <span className="hidden sm:inline">In winkelwagen</span>
               </button>
             </div>

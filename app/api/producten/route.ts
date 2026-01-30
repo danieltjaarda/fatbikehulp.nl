@@ -287,8 +287,15 @@ export async function PUT(request: NextRequest) {
     const updatedProduct = {
       ...existingProducten[productIndex],
       ...updates,
+      naam: updates.naam !== undefined ? updates.naam : existingProducten[productIndex].naam,
+      beschrijving: updates.beschrijving !== undefined ? updates.beschrijving : existingProducten[productIndex].beschrijving,
       prijs: updates.prijs !== undefined ? parseFloat(updates.prijs) : existingProducten[productIndex].prijs,
       voorraad: updates.voorraad !== undefined ? parseInt(updates.voorraad) : existingProducten[productIndex].voorraad,
+      categorie: updates.categorie !== undefined ? updates.categorie : existingProducten[productIndex].categorie,
+      merk: updates.merk !== undefined ? updates.merk : existingProducten[productIndex].merk,
+      model: updates.model !== undefined ? updates.model : existingProducten[productIndex].model,
+      afbeelding_url: updates.afbeelding_url !== undefined ? updates.afbeelding_url : existingProducten[productIndex].afbeelding_url,
+      actief: updates.actief !== undefined ? updates.actief : existingProducten[productIndex].actief,
       updated_at: new Date().toISOString()
     }
     

@@ -27,12 +27,12 @@ export default function FAQ({ items }: FAQProps) {
         return (
           <div 
             key={index} 
-            className="bg-white border-2 border-black rounded-2xl overflow-hidden transition-all duration-200"
+            className="bg-white/40 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden transition-all duration-200 shadow-xl"
           >
             <button
               type="button"
               onClick={() => handleToggle(index)}
-              className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors group"
+              className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/30 transition-colors group"
               aria-expanded={isOpen}
               aria-controls={`faq-answer-${index}`}
             >

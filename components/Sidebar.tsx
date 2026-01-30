@@ -107,23 +107,23 @@ export default function Sidebar({ onLogout }: SidebarProps) {
         />
       )}
 
-      {/* Sidebar */}
-      <div className={`bg-gray-800 text-white w-64 min-h-screen p-4 fixed lg:fixed inset-y-0 left-0 z-40 transform transition-transform duration-300 ease-in-out flex-shrink-0 ${
+      {/* Sidebar - Shopify Style */}
+      <div className={`bg-[#1a1a1a] text-white w-64 min-h-screen fixed lg:fixed inset-y-0 left-0 z-40 transform transition-transform duration-300 ease-in-out flex-shrink-0 border-r border-[#2d2d2d] ${
         isMobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       }`}>
-        <div className="mb-8">
-          <div className="flex justify-center mb-4">
-            <img 
-              src="/sidebar-logo.png"
-              alt="Logo" 
-              className="h-12 w-auto"
-            />
+        <div className="p-4 border-b border-[#2d2d2d]">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-8 h-8 bg-[#5f98c1] rounded flex items-center justify-center">
+              <Package className="h-5 w-5 text-white" />
+            </div>
+            <div>
+              <h1 className="text-sm font-semibold text-white">Fatbikehulp</h1>
+              <p className="text-xs text-[#8c8c8c]">Admin</p>
+            </div>
           </div>
-          <h1 className="text-xl font-bold text-center">Reparatie App</h1>
-          <p className="text-gray-400 text-sm text-center">Beheer systeem</p>
         </div>
 
-        <nav className="space-y-2">
+        <nav className="p-2 space-y-1">
           {menuItems.map((item) => {
             const Icon = item.icon
             const isActive = pathname === item.href || (item.submenu && pathname?.startsWith(item.href))
@@ -146,14 +146,14 @@ export default function Sidebar({ onLogout }: SidebarProps) {
                   <>
                     <button
                       onClick={toggleSubmenu}
-                      className={`flex items-center justify-between w-full px-3 py-2 rounded-md transition-colors ${
+                      className={`flex items-center justify-between w-full px-3 py-2 rounded text-sm font-medium transition-colors ${
                         isActive
-                          ? 'bg-[#ff6b35] text-white'
-                          : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                          ? 'bg-[#2d2d2d] text-white'
+                          : 'text-[#b3b3b3] hover:bg-[#2d2d2d] hover:text-white'
                       }`}
                     >
-                      <div className="flex items-center space-x-3">
-                        <Icon className="h-5 w-5" />
+                      <div className="flex items-center gap-3">
+                        <Icon className="h-4 w-4" />
                         <span>{item.name}</span>
                       </div>
                       {isSubmenuOpen ? (
@@ -163,7 +163,7 @@ export default function Sidebar({ onLogout }: SidebarProps) {
                       )}
                     </button>
                     {isSubmenuOpen && item.submenu && (
-                      <div className="ml-4 mt-1 space-y-1">
+                      <div className="ml-7 mt-1 space-y-1">
                         {item.submenu.map((subItem) => {
                           const isSubActive = pathname === subItem.href
                           return (
@@ -171,13 +171,13 @@ export default function Sidebar({ onLogout }: SidebarProps) {
                               key={subItem.name}
                               href={subItem.href}
                               onClick={() => setIsMobileOpen(false)}
-                              className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-colors ${
+                              className={`block px-3 py-1.5 rounded text-sm transition-colors ${
                                 isSubActive
-                                  ? 'bg-[#ff6b35] text-white'
-                                  : 'text-gray-400 hover:bg-gray-700 hover:text-white'
+                                  ? 'bg-[#2d2d2d] text-white'
+                                  : 'text-[#8c8c8c] hover:bg-[#2d2d2d] hover:text-white'
                               }`}
                             >
-                              <span className="text-sm">{subItem.name}</span>
+                              {subItem.name}
                             </Link>
                           )
                         })}
@@ -188,13 +188,13 @@ export default function Sidebar({ onLogout }: SidebarProps) {
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileOpen(false)}
-                    className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-colors ${
+                    className={`flex items-center gap-3 px-3 py-2 rounded text-sm font-medium transition-colors ${
                       isActive
-                        ? 'bg-[#ff6b35] text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                        ? 'bg-[#2d2d2d] text-white'
+                        : 'text-[#b3b3b3] hover:bg-[#2d2d2d] hover:text-white'
                     }`}
                   >
-                    <Icon className="h-5 w-5" />
+                    <Icon className="h-4 w-4" />
                     <span>{item.name}</span>
                   </Link>
                 )}
@@ -203,15 +203,15 @@ export default function Sidebar({ onLogout }: SidebarProps) {
           })}
         </nav>
 
-        <div className="mt-8 pt-8 border-t border-gray-700">
+        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-[#2d2d2d]">
           <button
             onClick={() => {
               setIsMobileOpen(false)
               onLogout()
             }}
-            className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md transition-colors w-full"
+            className="flex items-center gap-3 px-3 py-2 text-[#b3b3b3] hover:bg-[#2d2d2d] hover:text-white rounded text-sm font-medium transition-colors w-full"
           >
-            <LogOut className="h-5 w-5" />
+            <LogOut className="h-4 w-4" />
             <span>Uitloggen</span>
           </button>
         </div>
